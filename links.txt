@@ -1,10 +1,2 @@
-https://threatpost.com/
 https://www.helpnetsecurity.com/
 http://www.securityweek.com/
-http://www.bleepingcomputer.com
-http://thehackernews.com/
-http://www.blog.trendmicro.com
-http://www.securityaffairs.co
-http://www.hackread.com
-http://www.securelist.com
-http://www.itsecurityguru.org

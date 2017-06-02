@@ -1,11 +1,23 @@
 from crawl_bot import Crawl_bot
-from run import *
 from file_manage import *
 from queue import Queue
-import threading
+import threading, re, sys
 from get_domains import *
 
+
+def input_url(base_url):
+    global BASE_URL
+    BASE_URL=base_url
+
+if __name__=='__main__':
+    if (len(sys.argv)==2):
+        input_url(sys.argv[1])
+    else:
+        print("fuck")
+
+
 GET_DOMAIN = get_domain_name(BASE_URL)
+FOLDER_NAME = re.findall(r'.\.(.*?)\.', BASE_URL)[0]
 data_crawled = FOLDER_NAME + '/crawled.txt'
 data_in_queue = FOLDER_NAME + '/queue.txt'
 thread_count =10
@@ -40,4 +52,4 @@ def initiate_bot():               # Does the crawling job
 get_links_to_queue()
 initiate_bot()
 
-# 2, 4, 5
+
