@@ -1,14 +1,10 @@
 from crawl_bot import Crawl_bot
+from run import *
 from file_manage import *
 from queue import Queue
 import threading
 from get_domains import *
-import os
 
-os.system('rm -r cyware')
-
-BASE_URL = 'https://www.cyware.com'
-FOLDER_NAME = 'cyware'
 GET_DOMAIN = get_domain_name(BASE_URL)
 data_crawled = FOLDER_NAME + '/crawled.txt'
 data_in_queue = FOLDER_NAME + '/queue.txt'
