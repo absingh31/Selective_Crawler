@@ -1,7 +1,7 @@
 from crawl_bot import Crawl_bot
 from file_manage import *
 from queue import Queue
-import threading, re, sys
+import threading, re, sys, os
 from get_domains import *
 
 
@@ -20,7 +20,7 @@ GET_DOMAIN = get_domain_name(BASE_URL)
 FOLDER_NAME = re.findall(r'.\.(.*?)\.', BASE_URL)[0]
 data_crawled = FOLDER_NAME + '/crawled.txt'
 data_in_queue = FOLDER_NAME + '/queue.txt'
-thread_count =10
+thread_count =50
 queue = Queue()
 
 Crawl_bot(FOLDER_NAME, BASE_URL, GET_DOMAIN)

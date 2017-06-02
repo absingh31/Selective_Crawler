@@ -1,11 +1,2 @@
 https://www.helpnetsecurity.com/
-https://www.helpnetsecurity.com/#0
-https://www.helpnetsecurity.com/2016/09/20/review-boxcryptor/
-https://www.helpnetsecurity.com/2017/05/02/data-security-mobile-devices/
-https://www.helpnetsecurity.com/2017/05/23/breaking-tls/
-https://www.helpnetsecurity.com/2017/05/31/attack-hidden-services/
-https://www.helpnetsecurity.com/2017/06/01/onelogin-data-breach/
-https://www.helpnetsecurity.com/2017/06/02/ftse-companies-lack-secure-data-collection-methods/
-https://www.helpnetsecurity.com/2017/06/02/infosec-products-june-2/
-https://www.helpnetsecurity.com/contact/
-https://www.helpnetsecurity.com/view/news/
+https://www.helpnetsecurity.com/view/events/
