@@ -63,6 +63,7 @@ https://www.helpnetsecurity.com/tag/rsa-conference-2017/
 https://www.helpnetsecurity.com/tag/strategy/
 https://www.helpnetsecurity.com/tag/vulnerability/
 https://www.helpnetsecurity.com/view/articles/
+https://www.helpnetsecurity.com/view/events/
 https://www.helpnetsecurity.com/view/malware/
 https://www.helpnetsecurity.com/view/news/
 https://www.helpnetsecurity.com/view/reviews/

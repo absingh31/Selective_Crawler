@@ -6,18 +6,21 @@ from get_domains import *
 
 
 def input_url(base_url):
-    global BASE_URL
+    global BASE_URL, regex
     BASE_URL=base_url
+    regex = re.findall(r'.\.(.*?)\.', BASE_URL)[0]
+    delete = str('rm -r ' + regex)
+    os.system(delete)
 
 if __name__=='__main__':
     if (len(sys.argv)==2):
         input_url(sys.argv[1])
     else:
-        print("fuck")
+        print("Invalid input")
 
 
 GET_DOMAIN = get_domain_name(BASE_URL)
-FOLDER_NAME = re.findall(r'.\.(.*?)\.', BASE_URL)[0]
+FOLDER_NAME = regex
 data_crawled = FOLDER_NAME + '/crawled.txt'
 data_in_queue = FOLDER_NAME + '/queue.txt'
 thread_count =50
