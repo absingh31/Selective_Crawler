@@ -1,18 +1,29 @@
 from crawl_bot import Crawl_bot
 from file_manage import *
 from queue import Queue
-import threading
+import threading, re, sys, os
 from get_domains import *
-import os
 
-os.system('rm -r cyware')
 
-BASE_URL = 'https://www.cyware.com'
-FOLDER_NAME = 'cyware'
+def input_url(base_url):
+    global BASE_URL, regex
+    BASE_URL=base_url
+    regex = re.findall(r'.\.(.*?)\.', BASE_URL)[0]
+    delete = str('rm -r ' + regex)
+    os.system(delete)
+
+if __name__=='__main__':
+    if (len(sys.argv)==2):
+        input_url(sys.argv[1])
+    else:
+        print("Invalid input")
+
+
 GET_DOMAIN = get_domain_name(BASE_URL)
+FOLDER_NAME = regex
 data_crawled = FOLDER_NAME + '/crawled.txt'
 data_in_queue = FOLDER_NAME + '/queue.txt'
-thread_count =10
+thread_count =50
 queue = Queue()
 
 Crawl_bot(FOLDER_NAME, BASE_URL, GET_DOMAIN)
@@ -44,3 +55,7 @@ def initiate_bot():               # Does the crawling job
 get_links_to_queue()
 initiate_bot()
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1a50b198d4fa420c7105cf14755410fe65871504
