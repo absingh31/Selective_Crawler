@@ -1,15 +1,6 @@
-from urllib.parse import urlparse
+import tldextract
 
-def get_domain_name(link):       # Get Domain name
-    try:
-        results = fetch_sub_domain_name(link).split('.')
-        return results[-2] + '.' + results[-1]
-    except:
-        return ''
-
-
-def fetch_sub_domain_name(link): # Time to get the subdomain
-    try:
-        return urlparse(link).netloc
-    except:
-        return ''
+def get_domain_name(link):
+    url_extract = tldextract.extract(link)
+    site_name = url_extract.domain + '.' + url_extract.suffix
+    return site_name

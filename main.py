@@ -1,14 +1,18 @@
 from crawl_bot import Crawl_bot
 from file_manage import *
 from queue import Queue
-import threading, re, sys, os
+import threading, sys, os
 from get_domains import *
+import tldextract
 
 
 def input_url(base_url):
     global BASE_URL, regex
     BASE_URL=base_url
-    regex = re.findall(r'.\.(.*?)\.', BASE_URL)[0]
+
+    url_extract = tldextract.extract(BASE_URL)
+    regex = url_extract.domain
+
     delete = str('rm -r ' + regex)
     os.system(delete)
 
@@ -55,7 +59,3 @@ def initiate_bot():               # Does the crawling job
 get_links_to_queue()
 initiate_bot()
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 1a50b198d4fa420c7105cf14755410fe65871504
