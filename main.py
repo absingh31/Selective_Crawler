@@ -55,7 +55,3 @@ def initiate_bot():               # Does the crawling job
 get_links_to_queue()
 initiate_bot()
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 1a50b198d4fa420c7105cf14755410fe65871504
