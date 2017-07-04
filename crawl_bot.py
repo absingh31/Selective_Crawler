@@ -72,7 +72,7 @@ class Crawl_bot:
             received_response = urlopen(web_url)
             if 'text/html' in received_response.getheader('Content-Type'):
                 data_bytes = received_response.read()
-                html_data_string = data_bytes.decode("utf-8")
+                html_data_string = data_bytes.decode("latin-1")
             link_finder = link_crawler(Crawl_bot.start_link, web_url)
             link_finder.feed(html_data_string)
         except Exception as e:
